@@ -1,13 +1,13 @@
 
 <?php
-/* require the user as the parameter */
+/* require the roadie as the parameter */
 if(isset($_GET['roadid']) && strval($_GET['roadid'])) {
 
 	/* soak in the passed variable or set our own */
 	$roadid = strval($_GET['roadid']); //no default
-        $format = isset($_GET['format']) ? strval($_GET['format']) : 'json';
+        $format = isset($_GET['format']) ? strval($_GET['format']) : 'xml';
 
-	/* connect to the db */
+	/* connect to the db - add your own db info*/
 	$link = mysql_connect('url','username','password') or die('Cannot connect to the DB');
 	mysql_select_db('penndot_cameras',$link) or die('Cannot select the DB');
 	
