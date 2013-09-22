@@ -1,6 +1,7 @@
 <?php
+$format = isset($_GET['format']) ? strval($_GET['format']) : 'xml';
 /* connect to the db - add your own db info*/
-$link = mysql_connect('db_url', 'username', 'password') or die('Cannot connect to the DB');
+$link = mysql_connect('mysql.chapslife.com', 'lc88', 'lkc76lcj') or die('Cannot connect to the DB');
 mysql_select_db('penndot_cameras', $link) or die('Cannot select the DB');
 
 $query = "SELECT * FROM cameras";
@@ -29,7 +30,7 @@ if ($format == 'json') {
 				echo '<', $key, '>';
 				if (is_array($value)) {
 					foreach ($value as $tag => $val) {
-						echo '<', $tag, '>', htmlentities($val), '</', $tag, '>';
+						echo '<', $tag, '>',  htmlentities($val), '</', $tag, '>';
 					}
 				}
 				echo '</', $key, '>';
