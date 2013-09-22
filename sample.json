@@ -1,0 +1,16 @@
+{
+"cameras": [
+{
+"camera": {
+"id": "38",
+"lng": "-75.161750",
+"lat": "39.9577",
+"name": "I-676WB 676@Broad St",
+"road": "Interstate 676",
+"road_id": "i676",
+"url": "http://www.dot35.state.pa.us/public/Districts/District6/WebCams/D6Cam131.jpg",
+"distance": "0.382123512461909"
+}
+}
+]
+}
